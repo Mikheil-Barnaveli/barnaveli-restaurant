@@ -1,8 +1,9 @@
 import React from 'react'
+import './CartTemplate.css'
 
 function CartTemplate() {
   return (
-    <div>CartTemplate</div>
+    <div id='cart'>Cart</div>
   )
 }
 

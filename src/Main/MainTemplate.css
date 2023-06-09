@@ -1,0 +1,16 @@
+#the-main-div{
+    width: 100%;
+    height: 75dvh;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#image-div{
+    width: 60%;
+    height: 80%;
+}
+#images{
+    width: 100%;
+    height: 100%;
+}
