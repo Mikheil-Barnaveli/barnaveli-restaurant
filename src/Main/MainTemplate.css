@@ -1,6 +1,6 @@
 #the-main-div{
     width: 100%;
-    height: 75dvh;
+    min-height: 75dvh;
     background-color: green;
     display: flex;
     align-items: center;

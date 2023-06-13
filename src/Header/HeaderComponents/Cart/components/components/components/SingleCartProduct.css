@@ -1,0 +1,9 @@
+#single-cart-product{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 3rem;
+    margin-top: 0.5rem;
+}

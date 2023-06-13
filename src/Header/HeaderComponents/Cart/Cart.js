@@ -1,9 +1,12 @@
 import React from 'react'
-import CartTemplate from './CartTemplate'
+import './CartTemplate.css'
+import cart from '../../../assets/images/icon-cart.svg'
 
-function Cart() {
+function Cart(props) {
   return (
-    <CartTemplate/>
+    <div className='cart-div' onClick={props.handleCart}>
+        <img src={cart}></img>
+    </div>
   )
 }
 

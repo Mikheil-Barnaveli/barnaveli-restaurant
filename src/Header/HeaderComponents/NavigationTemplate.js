@@ -1,12 +1,12 @@
 import React from 'react'
 import './NavigationTemplate.css'
 
-function NavigationTemplate() {
+function NavigationTemplate(props) {
   return (
     <ul id='nav-ul'>
-      <li className='nav-list-item'>Home</li>
-      <li className='nav-list-item'>Contact</li>
-      <li className='nav-list-item'>Menu</li>
+      <li className='nav-list-item' onClick={props.navigateHome}>Home</li>
+      <li className='nav-list-item' onClick={props.navigateContact} >Contact</li>
+      <li className='nav-list-item' onClick={props.navigateMenu}>Menu</li>
     </ul>
   )
 }

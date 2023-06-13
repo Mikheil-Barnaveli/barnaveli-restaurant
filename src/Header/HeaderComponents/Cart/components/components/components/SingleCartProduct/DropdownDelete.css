@@ -1,0 +1,13 @@
+#dropdown-delete-btn{
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+#dropdown-delete-btn:hover{
+    cursor: pointer;
+}

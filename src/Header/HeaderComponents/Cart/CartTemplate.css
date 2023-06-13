@@ -1,3 +1,8 @@
-#cart{
+
+.cart-div:hover{
+    cursor: pointer;
+}
+.cart-div{
+    z-index: 2;
     margin-right: 2rem;
 }

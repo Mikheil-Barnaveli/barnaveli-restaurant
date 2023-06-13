@@ -1,9 +1,9 @@
 import React from 'react'
 import NavigationTemplate from './NavigationTemplate'
 
-function Navigation() {
+function Navigation(props) {
   return (
-    <NavigationTemplate/>
+    <NavigationTemplate {...props}/>
   )
 }
 
