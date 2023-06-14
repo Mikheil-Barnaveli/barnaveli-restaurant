@@ -1,0 +1,15 @@
+#conact-map{
+    width:30rem;
+    height:20rem;
+    border: 0;
+}
+#contact-map-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact-map-h1{
+    font-size: 2rem;
+    font-weight: bold;
+}

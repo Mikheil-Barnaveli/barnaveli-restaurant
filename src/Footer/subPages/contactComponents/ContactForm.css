@@ -1,0 +1,35 @@
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 20rem;
+}
+.contact-form-label{
+    font-weight: bold;
+}
+#contact-form-span{
+    font-weight:300
+}
+#contact-from-comment{
+    height: 6rem;
+}
+#contact-from-h1{
+    font-size: 2rem;
+}
+#contact-form-submit{
+    width: 5rem;
+    background-color: black;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+#contact-form-submit:hover{
+    color: #fff;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    #contact-form-div{
+        margin-top: 3rem;
+    }
+  }

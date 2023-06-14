@@ -1,7 +1,8 @@
 #menu-div{
     width: 100%;
     min-height: 75dvh;
-    background-color: red;
+    /* background-color: #fff; */
+    background-image: url(https://media.istockphoto.com/id/1285490364/vector/brown-vintage-wooden-planks-background.jpg?s=612x612&w=0&k=20&c=mjr_s66jWL8G1yTyBc0VprLKA1OPvmjREUQ0T3zP4Pg=);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

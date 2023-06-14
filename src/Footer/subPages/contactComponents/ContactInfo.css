@@ -1,0 +1,27 @@
+#contact-info-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 23rem;
+}
+#contact-info-h1{
+    font-size: 2rem;
+}
+.contact-info-h2{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.contact-info-span{
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+#name-span{
+    font-weight: bold;
+    font-style: italic;
+}
+#social-media-div{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}

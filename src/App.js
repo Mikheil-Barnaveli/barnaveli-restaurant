@@ -6,7 +6,8 @@ import Footer from "./Footer/Footer";
 import { Router, Route, Switch, Routes, useNavigate } from "react-router-dom";
 import Menu from "./Footer/subPages/Menu";
 import Contact from "./Footer/subPages/Contact";
-import data from './menuData.json'
+import data from "./menuData.json";
+import MenuItemPage from "./MenuItemPage/MenuItemPage";
 
 function App() {
   let navigate = useNavigate();
@@ -43,10 +44,11 @@ function App() {
         navigateMenu={() => navigate(`/Menu`)}
       />
 
-      <Routes path="/barnaveli-restaurant" element={<Main data={data}/>}>
-        <Route path="/barnaveli-restaurant" element={<Main data={data}/>} />
+      <Routes path="/barnaveli-restaurant" element={<Main data={data} />}>
+        <Route path="/barnaveli-restaurant" element={<Main data={data} />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Menu" element={<Menu menuData={data}/>} />
+        <Route path="/Menu" element={<Menu menuData={data} />} />
+        <Route path="/Menu/:menuItem" element={<MenuItemPage data={data} />} />
       </Routes>
 
       <Footer />
