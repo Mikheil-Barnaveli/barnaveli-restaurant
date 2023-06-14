@@ -3,7 +3,7 @@
 #burger-template-div{
     display: none;
     height: 85dvh;
-    background-color: aqua;
+    background-color: black;
     transition: 0.4s ease;
     position: absolute;
     right: 0;
@@ -21,10 +21,11 @@
     font-size: 2rem;
     margin-top: 3rem;
     margin-right: 3rem;
-
+    color: #FFD700;
 }
 .burger-nav-list-item:hover{
-    text-decoration: underline 3px red;
+    color: #fff;
+    border-bottom: 3px solid #fff;
 }
 #burger-navigation{
     width: 100%;

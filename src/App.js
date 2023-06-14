@@ -23,7 +23,7 @@ function App() {
   if (isBurgerNavActive == false) {
     burgerNav = "0";
   } else {
-    burgerNav = "50dvw";
+    burgerNav = "60dvw";
   }
 
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);

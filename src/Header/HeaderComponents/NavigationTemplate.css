@@ -10,7 +10,7 @@
 .nav-list-item{
     font-size: 1.5rem;
     font-weight: 300;
-    color: black;
+    color: #FFD700;
     border: none;
     height: 100%;
     display: flex;
@@ -19,7 +19,8 @@
 }
 .nav-list-item:hover{
     cursor: pointer;
-    border-bottom: 3px solid red;
+    color: #fff;
+    border-bottom: 3px solid #fff;
 }
 
 @media (max-width: 1000px) {
