@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
-import { Router, Route, Switch, Routes, useNavigate } from "react-router-dom";
+import { Router, Route, Switch, Routes, useNavigate, useParams } from "react-router-dom";
 import Menu from "./Footer/subPages/Menu";
 import Contact from "./Footer/subPages/Contact";
 import data from "./menuData.json";
@@ -32,30 +32,23 @@ function App() {
     setIsDropDownVisible(!isDropDownVisible);
   };
 
+  const [amountNumber, setAmountNumber] = useState(0);
+  function handlePlusAmount() {
+    setAmountNumber((prevState) => prevState + 1);
+  }
+  function handleMinusAmount() {
+    if (amountNumber > 0) {
+      setAmountNumber((prevState) => prevState - 1);
+    }
+  }
+
+  const [cartData, setCartData] = useState([]);
+
+  console.log(cartData, "es aris card data");
 
 
-  // const handleChangeQuantity = (changeType) => {
-  //   if (changeType === '+') {
-  //     setMyObject(prevState => ({ ...prevState, quantity: prevState.quantity + 1 }));
-  //   } else if (changeType === '-' && myObject.quantity > 0) {
-  //     setMyObject(prevState => ({ ...prevState, quantity: prevState.quantity - 1 }));
-  //   }
-  // };
 
-
-  // const [cartData, setCartData] = useState([])
-
-  // const handleAddItem = () => {
-  //   if (myObject.quantity > 0){
-  //     setCartData(prevState => [...prevState, myObject]);
-  //   setMyObject(defaultObject)}
-  //   console.log(cartData, "es aris cart data");
-  // };
-
-//  const updatedCartData = [...myArray, newObject];
-
-//  setMyArray(updatedArray);
-
+  
   return (
     <>
       <Header
@@ -71,8 +64,25 @@ function App() {
       <Routes path="/barnaveli-restaurant" element={<Main data={data} />}>
         <Route path="/barnaveli-restaurant" element={<Main data={data} />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Menu" element={<Menu menuData={data} />} />
-        <Route path="/Menu/:menuItem" element={<MenuItemPage data={data} handleCart={{}}/>} />
+        <Route
+          path="/Menu"
+          element={
+            <Menu menuData={data}  />
+          }
+        />
+        <Route
+          path="/Menu/:menuItem"
+          element={
+            <MenuItemPage
+              data={data}
+              amountNumber={amountNumber}
+              handleMinusAmount={handleMinusAmount}
+              handlePlusAmount={handlePlusAmount}
+              cartData={cartData}
+              setCartData={setCartData}
+            />
+          }
+        />
       </Routes>
 
       <Footer />

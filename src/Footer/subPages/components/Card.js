@@ -15,7 +15,7 @@ function Card(props) {
         <div
           id="menu-image-div"
           style={{ backgroundImage: `url(${props.image})` }}
-          // onClick={props.checkname}
+          onClick={props.checkName}
         ></div>
         <div id="info-div">
           <h1 id="menu-item-name" style={{ color: props.infoColor }}>
@@ -36,7 +36,7 @@ function Card(props) {
             </h2>
           </div>
           <div id="card-button-div">
-            <button id="add-to-cart-btn" className="card-btn">
+            <button id="add-to-cart-btn" className="card-btn" onClick={props.handleCart}>
               Add to Cart
             </button>
             <button

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function Menu(props) {
   let navigate = useNavigate();
 
-  console.log(props.menuData);
+  // console.log(props.menuData);
 
   return (
     <div id="menu-div">
@@ -17,10 +17,9 @@ function Menu(props) {
           name={el.name}
           category={el.category}
           price={el.price}
-          infoColor={{}}
-          BGcolor={{}}
           navigateIT={() => navigate(`/Menu/${el.id}`)}
-          checkname={{}}
+          // checkName={props.checkName}
+          // handleCart={props.handleCart}
         />;
       })}
     </div>
