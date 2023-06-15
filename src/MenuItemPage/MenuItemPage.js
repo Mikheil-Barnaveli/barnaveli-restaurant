@@ -45,8 +45,9 @@ function MenuItemPage(props) {
           <button
             className="menu-item-page-button"
             onClick={() => {
-              props.setCartData(prevState => [...prevState, element]);
-              // props.handleCart();
+              if (!props.cartData.some(item => item.id === element.id)) {
+                props.setCartData(prevState => [...prevState, element]);
+              }
             }}
           >
             Add to Cart

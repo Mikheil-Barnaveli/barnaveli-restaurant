@@ -1,0 +1,10 @@
+#cart-page-div{
+    width: 100%;
+    min-height: 75dvh;
+    background-color: #FFD700;
+    color: black;
+    padding: 1rem;
+}
+#cart-page-h1{
+    font-size: 3rem;
+}

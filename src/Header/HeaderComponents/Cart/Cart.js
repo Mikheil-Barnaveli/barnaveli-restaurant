@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./CartTemplate.css";
 import cart from "../../../assets/images/cart.png";
 import cart2 from "../../../assets/images/cart2.png";
+import { useNavigate } from "react-router-dom";
 
 function Cart(props) {
+  let navigate = useNavigate();
   const [currentCartLogo, setCurrentCartLogo] = useState(cart);
 
   function handleCartLogoChange() {
@@ -16,7 +18,7 @@ function Cart(props) {
   return (
     <div
       className="cart-div"
-      onClick={props.handleCart}
+      onClick={() => navigate(`/Cart`)}
       onMouseOver={handleCartLogoChange}
       onMouseLeave={handleCartLogoChange2}
     >

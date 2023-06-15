@@ -3,7 +3,7 @@ import './DropdownImg.css'
 
 function DropdownImg(props) {
   return (
-    <img src={props.data.src} alt='product' id='dropdown-product-image'></img>
+    <img src={props.data.image} alt='product' id='dropdown-product-image'></img>
   )
 }
 

@@ -4,7 +4,7 @@ import './DropdownText.css'
 function DropdownText(props) {
 
   let totalPrice = props.data.price * props.data.quantity
-
+  console.log(props.data, 'es aris dropdown data');
 
   return (
     <div id='dropdown-product-description'>

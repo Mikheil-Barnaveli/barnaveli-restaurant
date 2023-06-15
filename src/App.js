@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
-import { Router, Route, Switch, Routes, useNavigate, useParams } from "react-router-dom";
+import {
+  Router,
+  Route,
+  Switch,
+  Routes,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import Menu from "./Footer/subPages/Menu";
 import Contact from "./Footer/subPages/Contact";
 import data from "./menuData.json";
 import MenuItemPage from "./MenuItemPage/MenuItemPage";
+import CartPage from "./Footer/Cart/CartPage";
 
 function App() {
   let navigate = useNavigate();
 
-  console.log(data);
+  // console.log(data);
 
   const [isBurgerNavActive, setIsBurgerNavActive] = useState(false);
 
@@ -44,11 +52,22 @@ function App() {
 
   const [cartData, setCartData] = useState([]);
 
-  console.log(cartData, "es aris card data");
+  // console.log(cartData, "es aris card data");
+
+  // useEffect(() => {
+  //   // Load cartData from localStorage on component mount
+  //   const savedCartData = localStorage.getItem('cartData');
+  //   if (savedCartData) {
+  //     setCartData(JSON.parse(savedCartData));
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   // Save cartData to localStorage whenever it changes
+  //   localStorage.setItem('cartData', JSON.stringify(cartData));
+  // }, [cartData]);
 
 
-
-  
   return (
     <>
       <Header
@@ -59,17 +78,13 @@ function App() {
         navigateHome={() => navigate(`/barnaveli-restaurant`)}
         navigateContact={() => navigate(`/Contact`)}
         navigateMenu={() => navigate(`/Menu`)}
+        data={cartData}
       />
 
       <Routes path="/barnaveli-restaurant" element={<Main data={data} />}>
         <Route path="/barnaveli-restaurant" element={<Main data={data} />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route
-          path="/Menu"
-          element={
-            <Menu menuData={data}  />
-          }
-        />
+        <Route path="/Menu" element={<Menu menuData={data} />} />
         <Route
           path="/Menu/:menuItem"
           element={
@@ -83,6 +98,15 @@ function App() {
             />
           }
         />
+        <Route
+          path="/Cart"
+          element={
+            <CartPage
+              data={cartData}
+            />
+          }
+        />
+        CartPage
       </Routes>
 
       <Footer />

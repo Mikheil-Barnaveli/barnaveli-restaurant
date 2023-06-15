@@ -52,7 +52,7 @@ function HeaderTemplate(props) {
           onMouseLeave={handleNavBarChange2}
         ></img>
       </button>
-      {props.isDropDownVisible && <Dropdown data={{}} removeItem={{}} />}
+      {props.isDropDownVisible && <Dropdown data={props.data} removeItem={{}} />}
       <BurgerNav {...props} />
       </div>
     </div>
