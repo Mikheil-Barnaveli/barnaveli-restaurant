@@ -3,8 +3,8 @@ import './DropdownText.css'
 
 function DropdownText(props) {
 
-  let totalPrice = props.data.price * props.data.quantity
-  console.log(props.data, 'es aris dropdown data');
+  let totalPrice = props.data.price * props.quantity
+  // console.log(props.data, 'es aris dropdown data');
 
   return (
     <div id='dropdown-product-description'>
@@ -12,8 +12,8 @@ function DropdownText(props) {
         {props.data.name}
         </p>
       <p id='dropdown-product-price'>
-        {props.data.price}  x {props.data.quantity}
-        <span id='dropdown-product-total-price'> {totalPrice}
+        {props.data.price}  x {props.quantity}
+        <span id='dropdown-product-total-price'> Total:{totalPrice}
         </span>
       </p>
     </div>

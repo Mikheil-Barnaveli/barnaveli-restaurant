@@ -2,10 +2,11 @@
     list-style: none;
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     min-width: 350px;
-    width: 40rem;
+    width: 22rem;
     min-height: 5rem;
     margin-top: 0.5rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }

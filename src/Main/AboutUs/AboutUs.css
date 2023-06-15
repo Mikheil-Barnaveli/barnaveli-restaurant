@@ -1,0 +1,25 @@
+#about-us-div{
+    width: 100%;
+    min-height: 85dvh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    background-color: #FFD700;
+    gap: 3rem;
+}
+
+#about-us-h1{
+    font-size: 2rem;
+    width: 45rem;
+    letter-spacing: 1px;
+}
+
+#about-us-img{
+    width: 30rem;
+    min-width: 350px;
+    height: 75dvh;
+    border-radius: 5px;
+    border: 3px solid black;
+}

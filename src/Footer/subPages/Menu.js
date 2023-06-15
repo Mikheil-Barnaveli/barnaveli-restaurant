@@ -1,10 +1,16 @@
 import React from "react";
 import "./Menu.css";
 import Card from "./components/Card";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Menu(props) {
+  const params = useParams();
   let navigate = useNavigate();
+
+  const element = props.menuData.find((el) => {
+    return el.id === Number(params.menuItem);
+  });
+
 
   // console.log(props.menuData);
 
@@ -18,8 +24,11 @@ function Menu(props) {
           category={el.category}
           price={el.price}
           navigateIT={() => navigate(`/Menu/${el.id}`)}
-          // checkName={props.checkName}
-          // handleCart={props.handleCart}
+          item={el}
+          menuData={props.menuData}
+          cartData={props.cartData}
+          setCartData={props.setCartData}
+          id={el.id}
         />;
       })}
     </div>

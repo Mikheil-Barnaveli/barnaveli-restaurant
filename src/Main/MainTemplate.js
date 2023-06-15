@@ -1,13 +1,21 @@
 import React from 'react'
 import './MainTemplate.css'
+import Slider from './Slider/Slider'
+import AboutUs from './AboutUs/AboutUs'
 
 function MainTemplate() {
   return (
+    <>
     <div id='the-main-div'>
+      <h1 id='the-main-div-h1'>
+      Welcome to <span id='the-main-div-span'>BARNAVELI</span>, where flavors come alive and memories are made
+      </h1>
         <div id='image-div'>
-        <img src='https://www.carolinescooking.com/wp-content/uploads/2018/12/baked-coconut-shrimp-mango-sauce-photo.jpg' id='images'></img>
+        <Slider/>
         </div>
     </div>
+    <AboutUs/>
+    </>
   )
 }
 

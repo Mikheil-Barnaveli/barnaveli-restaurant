@@ -1,16 +1,27 @@
 #the-main-div{
     width: 100%;
-    min-height: 75dvh;
-    background-color: green;
+    min-height: 85dvh;
+    background-color: #FFD700;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 #image-div{
-    width: 60%;
+    width: 85%;
     height: 80%;
 }
 #images{
     width: 100%;
     height: 100%;
+}
+#the-main-div-h1{
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+}
+#the-main-div-span{
+    font-weight: bold;
 }

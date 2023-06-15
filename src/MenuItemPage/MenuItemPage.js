@@ -11,7 +11,7 @@ function MenuItemPage(props) {
     return el.id === Number(params.menuItem);
   });
 
-  // console.log(element);
+
 
   return (
     <div id="menu-item-page-div">
@@ -47,6 +47,7 @@ function MenuItemPage(props) {
             onClick={() => {
               if (!props.cartData.some(item => item.id === element.id)) {
                 props.setCartData(prevState => [...prevState, element]);
+                props.setQuantity(props.amountNumber)
               }
             }}
           >

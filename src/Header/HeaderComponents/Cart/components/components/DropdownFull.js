@@ -6,7 +6,7 @@ import './DropdownFull.css'
 function DropdownFull(props) {
 
 
-console.log(props.data, "es aris dropdown full");
+// console.log(props.data, "es aris dropdown full");
   return (
     <div id='dropdown-full-div'>
 

@@ -40,33 +40,23 @@ function App() {
     setIsDropDownVisible(!isDropDownVisible);
   };
 
-  const [amountNumber, setAmountNumber] = useState(0);
+  const [amountNumber, setAmountNumber] = useState(1);
   function handlePlusAmount() {
     setAmountNumber((prevState) => prevState + 1);
   }
   function handleMinusAmount() {
-    if (amountNumber > 0) {
+    if (amountNumber > 1) {
       setAmountNumber((prevState) => prevState - 1);
     }
   }
 
   const [cartData, setCartData] = useState([]);
 
-  // console.log(cartData, "es aris card data");
-
-  // useEffect(() => {
-  //   // Load cartData from localStorage on component mount
-  //   const savedCartData = localStorage.getItem('cartData');
-  //   if (savedCartData) {
-  //     setCartData(JSON.parse(savedCartData));
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   // Save cartData to localStorage whenever it changes
-  //   localStorage.setItem('cartData', JSON.stringify(cartData));
-  // }, [cartData]);
-
+  const removeItem = (id) => {
+    setCartData((prevData) => prevData.filter((item) => item.id !== id));
+  };
+  const [quantity, setQuantity] = useState(1)
+console.log(quantity, "es aris raodenoba");
 
   return (
     <>
@@ -84,7 +74,8 @@ function App() {
       <Routes path="/barnaveli-restaurant" element={<Main data={data} />}>
         <Route path="/barnaveli-restaurant" element={<Main data={data} />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Menu" element={<Menu menuData={data} />} />
+        <Route path="/Menu" element={<Menu menuData={data} cartData={cartData}
+              setCartData={setCartData}/>} />
         <Route
           path="/Menu/:menuItem"
           element={
@@ -95,6 +86,8 @@ function App() {
               handlePlusAmount={handlePlusAmount}
               cartData={cartData}
               setCartData={setCartData}
+              setQuantity={setQuantity}
+              quantity={quantity}
             />
           }
         />
@@ -103,6 +96,8 @@ function App() {
           element={
             <CartPage
               data={cartData}
+              removeItem={removeItem}
+              quantity={quantity}
             />
           }
         />
