@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContactForm.css";
 
 function ContactForm() {
+
+
+
   return (
     <div id="contact-form-div">
         <h1 id="contact-from-h1">Contact Us</h1>
@@ -15,7 +18,7 @@ function ContactForm() {
         <label className="contact-form-label">
           Add a comment <span id="contact-form-span">&#40;optional&#41;</span>:
         </label>
-        <input type="text" className="contact-form-input" id="contact-from-comment"></input>
+        <textarea type="text" className="contact-form-input" id="contact-from-comment" row="6"></textarea>
         <input type="submit" id="contact-form-submit"></input>
       </form>
     </div>

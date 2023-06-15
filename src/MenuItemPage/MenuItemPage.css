@@ -1,5 +1,39 @@
 #menu-item-page-div{
     width: 100%;
+    min-height: 75dvh;
+    /* background-image: url(https://cdn.pixabay.com/photo/2016/03/15/02/42/floor-1256804_1280.jpg);
+    background-size: contain;
+    background-position: center; */
+    background-color: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+
+#menu-item-page-image-div{
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu-item-page-image{
+    width: 70%;
+    height: 70%;
+    border-radius: 18px;
+    border: 5px solid black;
+}
+
+#menu-item-page-info-div{
+    width: 50%;
     height: 75dvh;
-    background-color: magenta;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
 }

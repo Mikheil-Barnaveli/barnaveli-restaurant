@@ -55,27 +55,36 @@ function ContactInfo() {
         </span>
       </h2>
       <div id="social-media-div">
-        <a href="https://www.facebook.com/" target="_blank">
-          <img
-            src={fBLogo}
-            onMouseOver={handleFBChange}
-            onMouseLeave={handleFBChange2}
-          ></img>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" >
-          <img
-            src={instaLogo}
-            onMouseOver={handleInstaChange}
-            onMouseLeave={handleInstaChange2}
-          ></img>
-        </a>
-        <a href="https://twitter.com/" target="_blank">
-          <img
-            src={tWTLogo}
-            onMouseOver={handleTwtChange}
-            onMouseLeave={handleTwtChange2}
-          ></img>
-        </a>
+        <div className="social-media-icon-div">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+              src={fBLogo}
+              onMouseOver={handleFBChange}
+              onMouseLeave={handleFBChange2}
+              className="social-media-icon"
+            ></img>
+          </a>
+        </div>
+        <div className="social-media-icon-div">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src={instaLogo}
+              onMouseOver={handleInstaChange}
+              onMouseLeave={handleInstaChange2}
+              className="social-media-icon"
+            ></img>
+          </a>
+        </div>
+        <div className="social-media-icon-div">
+          <a href="https://twitter.com/" target="_blank">
+            <img
+              src={tWTLogo}
+              onMouseOver={handleTwtChange}
+              onMouseLeave={handleTwtChange2}
+              className="social-media-icon"
+            ></img>
+          </a>
+        </div>
       </div>
     </div>
   );

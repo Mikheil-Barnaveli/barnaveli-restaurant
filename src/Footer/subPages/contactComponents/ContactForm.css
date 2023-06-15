@@ -11,21 +11,28 @@
     font-weight:300
 }
 #contact-from-comment{
-    height: 6rem;
+    min-height: 6rem;
+    width: 100%;
+    resize: none;
+    padding: 0.5rem;
+    text-align: start;
+    vertical-align: top;
 }
 #contact-from-h1{
     font-size: 2rem;
 }
 #contact-form-submit{
-    width: 5rem;
+    width: 6rem;
     background-color: black;
     color: #FFD700;
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding: 5px;
 }
 #contact-form-submit:hover{
-    color: #fff;
+    background-color: #fff;
+    color: black;
     cursor: pointer;
 }
 @media (max-width: 768px) {
