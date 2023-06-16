@@ -39,6 +39,8 @@ function App() {
 
   const [cartData, setCartData] = useState([]);
 
+  
+
   const removeItem = (id) => {
     setCartData((prevData) => prevData.filter((item) => item.id !== id));
   };
@@ -100,6 +102,7 @@ function App() {
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
               updatedQuantity={updatedQuantity}
+              cartData={cartData}
             />
           }
         />

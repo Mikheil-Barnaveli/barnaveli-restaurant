@@ -26,6 +26,8 @@ function CartPage(props) {
             removeItem={props.removeItem}
             updateTotalPrice={props.updateTotalPrice}
             calculateSum={calculateSum}
+            cartData={props.cartData}
+            setTotalSum={setTotalSum}
           />
         );
       })}
