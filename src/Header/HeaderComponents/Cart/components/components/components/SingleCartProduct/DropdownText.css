@@ -1,7 +1,10 @@
 #dropdown-product-description{
-    width: 40%;
+    width: 50%;
     height: 100%;
     text-align: left;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 #dropdown-product-name{
     width: 100%;
@@ -9,15 +12,76 @@
     font-weight: 400;
     font-size: 16px;
     color: black;
+    font-weight: bold;
 }
 #dropdown-product-price{
-    width: 100%;
-    height: 50%;
+    width: 4rem;
+    height: 2rem;
     font-weight: 400;
-    font-size: 16px;
     color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: bold;
 }
 #dropdown-product-total-price{
     color: #1D2026;
     font-weight: 700;
+}
+#menu-item-page-description-div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+}
+.menu-item-page-button{
+    width: 7rem;
+    background-color: black;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px;
+}
+#cart-item-price-amount{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#menu-item-page-amount-btns{
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantity-btn{
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 3px;
+}
+.quantity-btn:hover{
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+}
+.quantity{
+    width: 3rem;
+    height: auto;
+    text-align: center;
+}
+#total-price-div{
+    width: 100%;
+}
+#total-price-span{
+    font-weight: bold;
 }

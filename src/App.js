@@ -20,8 +20,6 @@ import CartPage from "./Footer/Cart/CartPage";
 function App() {
   let navigate = useNavigate();
 
-  // console.log(data);
-
   const [isBurgerNavActive, setIsBurgerNavActive] = useState(false);
 
   let burgerNav;
@@ -35,36 +33,31 @@ function App() {
     burgerNav = "60dvw";
   }
 
-  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
-  const handleCartButtonClick = () => {
-    setIsDropDownVisible(!isDropDownVisible);
-  };
-
-  const [amountNumber, setAmountNumber] = useState(1);
-  function handlePlusAmount() {
-    setAmountNumber((prevState) => prevState + 1);
-  }
-  function handleMinusAmount() {
-    if (amountNumber > 1) {
-      setAmountNumber((prevState) => prevState - 1);
-    }
-  }
-
   const [cartData, setCartData] = useState([]);
 
   const removeItem = (id) => {
     setCartData((prevData) => prevData.filter((item) => item.id !== id));
   };
-  const [quantity, setQuantity] = useState(1)
-console.log(quantity, "es aris raodenoba");
+
+  const [totalPrice, setTotalPrice] = useState(0);
+  const updateTotalPrice = (price) => {
+    setTotalPrice(price);
+  };
+
+  const totalPrice2 = totalPrice;
+  console.log(totalPrice2);
+
+
+  const [updatedQuantity, setUpdatedQuantity] = useState(1)
+  console.log(updatedQuantity);
+
+  
 
   return (
     <>
       <Header
         burgerNav={burgerNav}
         burgerNavBtn={handleBurgerNav}
-        handleCart={handleCartButtonClick}
-        isDropDownVisible={isDropDownVisible}
         navigateHome={() => navigate(`/barnaveli-restaurant`)}
         navigateContact={() => navigate(`/Contact`)}
         navigateMenu={() => navigate(`/Menu`)}
@@ -74,20 +67,23 @@ console.log(quantity, "es aris raodenoba");
       <Routes path="/barnaveli-restaurant" element={<Main data={data} />}>
         <Route path="/barnaveli-restaurant" element={<Main data={data} />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Menu" element={<Menu menuData={data} cartData={cartData}
-              setCartData={setCartData}/>} />
+        <Route
+          path="/Menu"
+          element={
+            <Menu
+              menuData={data}
+              cartData={cartData}
+              setCartData={setCartData}
+            />
+          }
+        />
         <Route
           path="/Menu/:menuItem"
           element={
             <MenuItemPage
               data={data}
-              amountNumber={amountNumber}
-              handleMinusAmount={handleMinusAmount}
-              handlePlusAmount={handlePlusAmount}
               cartData={cartData}
               setCartData={setCartData}
-              setQuantity={setQuantity}
-              quantity={quantity}
             />
           }
         />
@@ -97,7 +93,10 @@ console.log(quantity, "es aris raodenoba");
             <CartPage
               data={cartData}
               removeItem={removeItem}
-              quantity={quantity}
+              updateTotalPrice={updateTotalPrice}
+              totalPrice={totalPrice}
+              setTotalPrice={setTotalPrice}
+              setUpdatedQuantity={setUpdatedQuantity}
             />
           }
         />

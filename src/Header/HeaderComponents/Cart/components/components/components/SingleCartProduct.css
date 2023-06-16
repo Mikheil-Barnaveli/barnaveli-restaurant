@@ -4,8 +4,9 @@
     text-align: center;
     justify-content: space-between;
     min-width: 350px;
-    width: 22rem;
+    width: 50dvw;
     min-height: 5rem;
+    height: 15dvh;
     margin-top: 0.5rem;
     flex-wrap: wrap;
     gap: 1rem;

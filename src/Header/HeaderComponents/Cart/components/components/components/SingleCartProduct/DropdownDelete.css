@@ -1,6 +1,6 @@
 #dropdown-delete-btn{
-    width: 10%;
-    height: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 5px;
     background-color: black;
     color: #FFD700;
@@ -17,4 +17,11 @@
 #delete-img{
     width: 100%;
     height: 100%;
+}
+#delete-btn-div{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

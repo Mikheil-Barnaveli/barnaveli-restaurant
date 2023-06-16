@@ -42,3 +42,11 @@
     height: 3rem;
     z-index: 2;
 }
+@media (max-width: 501px) {
+    #contact-info-div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+  }

@@ -76,23 +76,10 @@
     align-items: center;
     justify-content: center;
 }
-.quantity-btn{
-    width: 3rem;
-    height: auto;
-    background-color: black;
-    color: #FFD700;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 5px;
-}
-.quantity-btn:hover{
-    background-color: #fff;
-    color: black;
-    cursor: pointer;
-}
-.quantity{
-    width: 3rem;
-    height: auto;
-    text-align: center;
-}
+@media (max-width: 769px) {
+    #menu-item-page-info-div{
+        width: 100%;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+  }

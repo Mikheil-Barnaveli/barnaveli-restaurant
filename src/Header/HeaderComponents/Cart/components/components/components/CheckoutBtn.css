@@ -1,11 +1,30 @@
-#chechkout-btn{
-width: 100%;
-border-radius: 10px;
-background-color: #FF7E1B;
-color: white;
-font-size: 16px;
-font-weight: 700;
-padding-block: 1rem;
-margin-top: 1rem;
-border: none;
+#chechkout-btn {
+  width: 20rem;
+  border-radius: 10px;
+  background-color: black;
+  color: #ffd700;
+  font-size: 16px;
+  font-weight: 700;
+  padding-block: 1rem;
+  margin-top: 1rem;
+  border: none;
+}
+#chechkout-btn:hover {
+  cursor: pointer;
+  color: #fff;
+}
+#checkout-div {
+  position: absolute;
+  bottom: 1rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#checkout-total-h1{
+    font-weight: 300;
+}
+#checkout-total-span{
+    font-weight: bold;
 }

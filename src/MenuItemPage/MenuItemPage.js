@@ -23,7 +23,7 @@ function MenuItemPage(props) {
           <h2 className="menu-item-page-info-h2">{element.name}</h2>
           <h2 className="menu-item-page-info-h2">
             Price:{" "}
-            <span className="menu-item-page-info-span">{element.price}</span>$
+            <span className="menu-item-page-info-span">{element.price}$</span>
           </h2>
           <h2 className="menu-item-page-info-h2">
             Description:{" "}
@@ -33,21 +33,11 @@ function MenuItemPage(props) {
           </h2>
         </div>
         <div id="menu-item-page-button-div">
-          <div id="menu-item-page-amount-btns">
-            <button onClick={props.handleMinusAmount} className="quantity-btn">
-              -
-            </button>
-            <p className="quantity">{props.amountNumber}</p>
-            <button onClick={props.handlePlusAmount} className="quantity-btn">
-              +
-            </button>
-          </div>
           <button
             className="menu-item-page-button"
             onClick={() => {
               if (!props.cartData.some(item => item.id === element.id)) {
                 props.setCartData(prevState => [...prevState, element]);
-                props.setQuantity(props.amountNumber)
               }
             }}
           >

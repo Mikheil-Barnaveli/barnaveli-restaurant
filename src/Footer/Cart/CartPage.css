@@ -4,6 +4,7 @@
     background-color: #FFD700;
     color: black;
     padding: 1rem;
+    position: relative;
 }
 #cart-page-h1{
     font-size: 3rem;

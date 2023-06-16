@@ -3,7 +3,6 @@ import Cart from "./HeaderComponents/Cart/Cart";
 import Navigation from "./HeaderComponents/Navigation";
 import "./HeaderTemplate.css";
 import BurgerNav from "./HeaderComponents/BurgerNav";
-import Dropdown from "./HeaderComponents/Cart/components/Dropdown";
 import logo from "../assets/images/logo.png";
 import logo2 from "../assets/images/logo2.png";
 import { useNavigate } from "react-router-dom";
@@ -32,13 +31,7 @@ function HeaderTemplate(props) {
   return (
     <div id="the-header-template">
       <div id="logo-div">
-        <img
-          src={currentLogo}
-          id="logo-image"
-          onMouseOver={handleLogoChange}
-          onMouseLeave={handleLogoChange2}
-          onClick={() => navigate(`/barnaveli-restaurant`)}
-        ></img>
+        <h1 id="logo" onClick={() => navigate(`/barnaveli-restaurant`)}>BARNAVELI</h1>
       </div>
       <div id="header-nav-div">
         <Navigation {...props} />
@@ -52,7 +45,6 @@ function HeaderTemplate(props) {
           onMouseLeave={handleNavBarChange2}
         ></img>
       </button>
-      {props.isDropDownVisible && <Dropdown data={props.data} removeItem={{}} />}
       <BurgerNav {...props} />
       </div>
     </div>

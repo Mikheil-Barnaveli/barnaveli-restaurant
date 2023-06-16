@@ -14,12 +14,16 @@
     font-size: 2rem;
     width: 45rem;
     letter-spacing: 1px;
+    font-weight: 300;
 }
 
 #about-us-img{
     width: 30rem;
     min-width: 350px;
-    height: 75dvh;
+    height: 50dvh;
     border-radius: 5px;
     border: 3px solid black;
+}
+#about-us-span{
+    font-family: 'Aoboshi One', serif;
 }

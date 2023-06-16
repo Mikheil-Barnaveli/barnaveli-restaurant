@@ -16,9 +16,11 @@ function DropdownDelete(props) {
 
 
   return (
+    <div id='delete-btn-div'>
     <button onClick={() => props.removeItem(props.data.id)} id='dropdown-delete-btn'>
       <img src={removeIcon} onMouseOver={deleteImage} onMouseLeave={deleteImage2} id='delete-img'></img>
     </button>
+    </div>
   )
 }
 
