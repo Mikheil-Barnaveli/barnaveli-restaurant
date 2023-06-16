@@ -7,9 +7,9 @@ function Menu(props) {
   const params = useParams();
   let navigate = useNavigate();
 
-  const element = props.menuData.find((el) => {
-    return el.id === Number(params.menuItem);
-  });
+  // const element = props.menuData.find((el) => {
+  //   return el.id === Number(params.menuItem);
+  // });
 
 
   // console.log(props.menuData);

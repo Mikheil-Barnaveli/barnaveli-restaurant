@@ -12,7 +12,6 @@ function MenuItemPage(props) {
   });
 
 
-
   return (
     <div id="menu-item-page-div">
       <div id="menu-item-page-image-div">

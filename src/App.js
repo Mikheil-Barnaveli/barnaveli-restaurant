@@ -16,8 +16,12 @@ import Contact from "./Footer/subPages/Contact";
 import data from "./menuData.json";
 import MenuItemPage from "./MenuItemPage/MenuItemPage";
 import CartPage from "./Footer/Cart/CartPage";
+data.forEach(el=>el.amount=1)
+data.forEach(el=>el.total=el.price)
 
 function App() {
+
+
   let navigate = useNavigate();
 
   const [isBurgerNavActive, setIsBurgerNavActive] = useState(false);
@@ -44,14 +48,13 @@ function App() {
     setTotalPrice(price);
   };
 
-  const totalPrice2 = totalPrice;
-  console.log(totalPrice2);
+  // const totalPrice2 = totalPrice;
+  // console.log(totalPrice);
 
 
   const [updatedQuantity, setUpdatedQuantity] = useState(1)
-  console.log(updatedQuantity);
 
-  
+
 
   return (
     <>
@@ -96,7 +99,7 @@ function App() {
               updateTotalPrice={updateTotalPrice}
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
-              setUpdatedQuantity={setUpdatedQuantity}
+              updatedQuantity={updatedQuantity}
             />
           }
         />
