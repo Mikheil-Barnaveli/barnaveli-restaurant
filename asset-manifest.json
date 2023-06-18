@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/barnaveli-restaurant/static/css/main.029bae8c.css",
-    "main.js": "/barnaveli-restaurant/static/js/main.a705f961.js",
+    "main.css": "/barnaveli-restaurant/static/css/main.718d919b.css",
+    "main.js": "/barnaveli-restaurant/static/js/main.9be8b833.js",
     "static/media/slide3.jpg": "/barnaveli-restaurant/static/media/slide3.e5df36620fb5782f9c29.jpg",
     "static/media/background-img.jpg": "/barnaveli-restaurant/static/media/background-img.3be7e25c0968915a45f8.jpg",
     "static/media/slide1.jpg": "/barnaveli-restaurant/static/media/slide1.5efdf0f4e126484b4caa.jpg",
     "static/media/slide2.jpg": "/barnaveli-restaurant/static/media/slide2.897c7ce9cdcd7ea52b09.jpg",
     "index.html": "/barnaveli-restaurant/index.html",
-    "main.029bae8c.css.map": "/barnaveli-restaurant/static/css/main.029bae8c.css.map",
-    "main.a705f961.js.map": "/barnaveli-restaurant/static/js/main.a705f961.js.map"
+    "main.718d919b.css.map": "/barnaveli-restaurant/static/css/main.718d919b.css.map",
+    "main.9be8b833.js.map": "/barnaveli-restaurant/static/js/main.9be8b833.js.map"
   },
   "entrypoints": [
-    "static/css/main.029bae8c.css",
-    "static/js/main.a705f961.js"
+    "static/css/main.718d919b.css",
+    "static/js/main.9be8b833.js"
   ]
 }
