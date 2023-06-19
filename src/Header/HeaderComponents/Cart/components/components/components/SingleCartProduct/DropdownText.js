@@ -23,13 +23,6 @@ function DropdownText(props) {
 
   let totalPrice = props.data.price * amountNumber;
 
-  // useEffect(() => {
-  //   // Calculate total price
-  //   const newTotalPrice = totalPrice;
-
-  //   // Call the updateTotalPrice callback function passed from CartPage
-  //   props.updateTotalPrice(newTotalPrice);
-  // }, [amountNumber, props.data.price, props.updateTotalPrice]);
 
 
 

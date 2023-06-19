@@ -34,6 +34,7 @@ function CartPage(props) {
       <CheckoutBtn
         updatedQuantity={props.updatedQuantity}
         totalSum={totalSum}
+        calculateSum={calculateSum}
       />
     </div>
   );

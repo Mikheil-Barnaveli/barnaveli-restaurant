@@ -21,6 +21,7 @@ function DropdownDelete(props) {
     let sum = reduceVar.reduce((sum, obj) => sum + obj.total, 0);
     console.log(reduceVar, "deletedan");
     props.setTotalSum(sum)
+    props.calculateSum()
   }
 
   return (
@@ -32,6 +33,7 @@ function DropdownDelete(props) {
           deleteCartItem();
           props.calculateSum();
         }}
+        onChange={deleteCartItem}
         id="dropdown-delete-btn"
       >
         <img
