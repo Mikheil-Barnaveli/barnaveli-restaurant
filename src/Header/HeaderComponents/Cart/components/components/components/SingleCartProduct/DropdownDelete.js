@@ -14,15 +14,15 @@ function DropdownDelete(props) {
   }
 
 
-  function deleteCartItem() {
-    let reduceVar = props.cartData;
-    reduceVar.reduce((sum, obj) => sum + obj.total, 0);
-    reduceVar.filter((item) => item.id !== props.data.id);
-    let sum = reduceVar.reduce((sum, obj) => sum + obj.total, 0);
-    console.log(reduceVar, "deletedan");
-    props.setTotalSum(sum)
-    props.calculateSum()
-  }
+  // function deleteCartItem() {
+  //   let reduceVar = props.cartData;
+  //   reduceVar.reduce((sum, obj) => sum + obj.total, 0);
+  //   reduceVar.filter((item) => item.id !== props.data.id);
+  //   let sum = reduceVar.reduce((sum, obj) => sum + obj.total, 0);
+  //   console.log(reduceVar, "deletedan");
+  //   props.setTotalSum(sum)
+  //   props.calculateSum()
+  // }
 
   return (
     <div id="delete-btn-div">
